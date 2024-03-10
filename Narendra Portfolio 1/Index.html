@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /*****COMMON CSS SECTION*****/
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -outline: 0;
+
+    }
+
+    html,
+    body {
+      font-size: 14px;
+      font-weight: 400;
+      background: #000000;
+      color: #fff;
+    }
+
+    .container {
+      width: 1100px;
+      margin: 0px auto;
+      display: table;
+    }
+
+    .width-33 {
+      width: 33%;
+      float: left;
+    }
+
+    .width-66 {
+      width: 66%;
+      float: left;
+    }
+
+    /*****MENU SECTION*****/
+    .main-panel {
+      width: 100%;
+      float: left;
+      padding-top: 20px;
+      padding-bottom: 50px;
+      height: 100vh;
+    }
+
+    .logo {
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    .span-col {
+      color: #ffbf35;
+    }
+
+    nav {
+      float: right;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      margin-left: 20px;
+      color: white;
+    }
+
+    /*****Main BANNER*****/
+    .width-50 {
+      float: left;
+      width: 50%;
+    }
+
+    .banner-section {
+      width: 100%;
+      float: left;
+      margin-top: 25vh;
+    }
+
+    .banner-section h1 {
+      font-size: 48px;
+      margin-top: 10px;
+      font-weight: bolder;
+    }
+
+    .banner-section h2 {
+      font-size: 20px;
+      line-height: 25px;
+      margin-top: 10px;
+      font-weight: 400;
+    }
+
+    .banner-section a {
+      float: left;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 20px;
+      border-radius: 50%;
+      text-align: center;
+      border: 2px solid #ffbf35;
+      color: #ffbf35;
+      margin-left: 10px;
+      height: 50px;
+      width: 50px;
+      line-height: 50px;
+    }
+
+    /*****Main BANNER IMAGE*****/
+    .main-panel img {
+      margin-top: 10%;
+      width: 100%;
+      margin-left: 10%;
+    }
+
+    /*ABOUT US SECTION*/
+    .main-section {
+      width: 100%;
+      float: left;
+      padding: 110px 0px 110px 0px;
+    }
+
+    .width-100 {
+      width: 100%;
+      float: left;
+    }
+
+    .mt-20 {
+      margin-top: 20px;
+    }
+
+    .heading-text {
+      width: 100%;
+      float: left;
+      font-size: 35px;
+      text-align: center;
+      margin-bottom: 50px;
+      color: #ffbf35;
+    }
+
+    .about-img {
+      width: 100%;
+      padding: 0px 50px;
+      margin-top: 20px;
+    }
+
+    .about-us {
+      width: 100%;
+      float: left;
+      padding: 20px;
+    }
+
+    .about-us p {
+      font-size: 16px;
+      margin-top: 15px;
+      line-height: 27px;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    table th,
+    table td {
+      font-size: 16px;
+      text-align: left;
+      padding: 5px 0px;
+    }
+
+    /*****SKILL SECTION*****/
+    .skill {
+      margin-top: 30px;
+      font-size: 17px;
+    }
+
+    .skill span {
+      float: right;
+    }
+
+    .skill div {
+      width: 100%;
+      float: left;
+      margin-top: 5px;
+      background: #e7e7e7;
+      border-radius: 10px;
+    }
+
+    .skill div span {
+      background: #ffbf35;
+      height: 5px;
+      float: left;
+    }
+
+    div[role="progressbar"] {
+      color: #ffbf35;
+      margin-left: 100px;
+      margin-bottom: 20px;
+      width: 100px;
+      ;
+      height: 100px;
+      ;
+      border-radius: 50%;
+
+      place-items: center;
+      display: grid;
+
+      --pgPercentage: var(--value);
+      background: radial-gradient(closest-side, black 80%, transparent 0 99.9%, black 0),
+        conic-gradient(#ffbf35 calc(var(--pgPercentage) * 1%), #ffe6af 0);
+
+    }
+
+    /*SERVICE SECTION*/
+    .service-list {
+      padding: 40px;
+      margin-top: 35px;
+      background: #262626;
+      border-radius: 15px;
+      width: 94%;
+      float: left;
+    }
+
+    .service-list i {
+      font-size: 50px;
+      color: #ffbf35;
+      width: 70px;
+      float: left;
+    }
+
+    .service-list h3 {
+      font-size: 28px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+    }
+
+    .service-list p {
+      font-size: 15px;
+      line-height: 25px;
+    }
+
+    /*CONTACT US SECTION*/
+    .contact form {
+      width: 66%;
+      margin: 0px auto;
+    }
+
+    .contact input,
+    textarea {
+      width: 100%;
+      float: left;
+      margin-bottom: 20px;
+      height: 40px;
+      padding: 10px;
+      border: 1px solid #a1a1a1;
+    }
+
+    .contact textarea {
+      height: 80px;
+    }
+
+    .contact button {
+      width: 100%;
+      float: left;
+      margin-bottom: 20px;
+      height: 40px;
+      padding: 10px;
+      background: #ffbf35;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+    }
+
+    .contact h3 {
+      font-size: 26px;
+      text-align: center;
+      margin-top: 60px;
+      color: #ffbf35;
+    }
+
+    .contact h4 {
+      font-size: 22px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .contact p {
+      text-align: center;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    /*****FOOTER SECTION*****/
+    .footer {
+      background-color: #202020;
+      padding: 30px 0px 40px 0px;
+      width: 100%;
+      float: left;
+    }
+
+    .footer-sect {
+      color: #b3b3b3;
+    }
+
+    .footer-sect a {
+      color: #b3b3b3;
+      margin-left: 10px;
+      text-decoration: none;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .social-icon a i {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #cdcdcd;
+      line-height: 50px;
+      font-size: 20px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-----MENU SECTION------>
+  <div class="main-panel">
+    <div class="container">
+      <div class="width-33 logo">Port <span class="span-col">folio</span>
+      </div>
+      <div class="width-66">
+        <nav>
+          <a href="Home">
+            <span class="span-col">Home</span>
+          </a>
+          <a href="#About">About me</a>
+          <a href="#Myskills">My Skills</a>
+          <a href="# My Projects"> My Projects</a>
+          <a href="#GEt In Touch">Get In Touch</a>
+        </nav>
+      </div>
+    </div>
+    <!------MAIN BANNERR------>
+    <div class="container ">
+      <div class="width-50">
+        <div class="banner-section">
+          
+          <h1>Akula <span class="span-col"> Narendra Reddy</span>
+          </h1>
+          <h2>- I'm a passionate Java Developer...</h2>
+          <a href="#">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-linkedin"></i>          </a>
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>          </a>
+          <a href="#">
+            <i class="fa-brands fa-github"></i>          </a>
+        </div>
+      </div>
+      <div class="width-50">
+        <img src="C:\Users\hp\Desktop\Narendra Portfolio\images\home.png" class="Home-img">
+      </div>
+    </div>
+  </div>
+  <!------ABOUT US SECTION------>
+  <div class="main-section bg-lightgrey" id="About">
+    <div class="container">
+      <div class="width-50">
+        <img src="C:\Users\hp\Desktop\Narendra Portfolio\images\home.png" class="about-img">
+      </div>
+      <div class="width-50">
+        <div class="about-us">
+          <h2 class="heading-text">About Us</h2>
+          <h3>I am available for Java Developer</h3>
+          <p>Aim to be associated with a progressive organization which offers an excellent
+            atmosphere to prove myself by utilizing all technical knowledge into practice and profit myself
+            with experience and valuable knowledge for the development and growth of the organization</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!------SKILL SECTION------>
+  <div class="main-section">
+    <div class="container">
+      <h2 class="heading-text">My Skills</h2>
+      <div class="width-50">
+        <div class="skill">
+          <b>Java</b>
+          <span>80%</span>
+          <div>
+            <span style="width:95%"></span>
+          </div>
+        </div>
+        <div class="skill">
+          <b>Reactjs</b>
+          <span>85%</span>
+          <div>
+            <span style="width:91%"></span>
+          </div>
+        </div>
+        <div class="skill">
+          <b>JavaScript</b>
+          <span>85%</span>
+          <div>
+            <span style="width:85%"></span>
+          </div>
+        </div>
+        <div class="skill">
+          <b>SpringBoot</b>
+          <span>60%</span>
+          <div>
+            <span style="width:79%"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="width-50">
+        <div class="width-50">
+          <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:65">Java-80
+          </div>
+        </div>
+        <div class="width-50">
+          <div role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="--value:85">Reactjs-85
+          </div>
+        </div>
+        <div class="width-50">
+          <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:65">
+            Javascript-80</div>
+        </div>
+        <div class="width-50">
+          <div role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="--value:85">
+            Springboot-60</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!------SERVICE SECTION------>
+  <div class="main-section">
+    <div class="container">
+      <h2 class="heading-text"> My Projects</h2>
+      <div class="width-50">
+        <div class="service-list">
+          <i class="fa fa-chrome"></i>
+          <h3>Full Stack Aplication</h3>
+          <p>Develop with front-end java and back-end SpringBoot</p>
+        </div>
+      </div>
+      <div class="width-50">
+        <div class="service-list">
+          <i class="fa fa-instagram"></i>
+          <h3>E Commerse Site</h3>
+          <p>Develop with front-end Reactjs and back-end Json server ,its Crud Aplication </p>
+        </div>
+      </div>
+      <div class="width-50">
+        <div class="service-list">
+          <i class="fa fa-reddit"></i>
+          <h3>Fitness Design Club</h3>
+          <p>Develop with front-end Html and css styles , complete front-end Aplication</p>
+        </div>
+      </div>
+      <div class="width-50">
+        <div class="service-list">
+          <i class="fa fa-video-camera"></i>
+          <h3>Adventure Aplication</h3>
+          <p>Develop with front-end Html and css styles , complete front-end Aplication</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-------------CONTACT US SECTION----------------------->
+  <div class="main-section contact bg-lightgrey">
+    <div class="container">
+      <h2 class="heading-text">Get In Touch</h2>
+      <div class="width-100">
+        <form>
+          <input type="text" placeholder="Full Name...">
+          <input type="text" placeholder="Full Email Id...">
+          <input type="text" placeholder="Full Mobile No...">
+          <textarea placeholder="Enter Address..."></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="width-33">
+        <h3>
+          <i class="fa fa-map-marker"></i>
+        </h3>
+        <h4>Address</h4>
+        <p>plot:44 , Alcapuri colony , Nalgonda ,Telangana .</p>
+      </div>
+      <div class="width-33">
+        <h3>
+          <i class="fa fa-phone"></i>
+        </h3>
+        <h4>Phone</h4>
+        <p>+91 8125125242</p>
+      </div>
+      <div class="width-33">
+        <h3>
+          <i class="fa fa-envelope-o"></i>
+        </h3>
+        <h4>Email</h4>
+        <p>a.narendrareddy976@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  <!------FOOTER SECTION------>
+  <div class="footer">
+    <div class="container">
+      <div class="footer-sect social-icon width-50">
+        <a href="#">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <div class="footer-sect mt-20 width-50">This is Narendra Reddy Portfolio ..........</div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
